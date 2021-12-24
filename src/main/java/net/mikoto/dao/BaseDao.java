@@ -13,6 +13,13 @@ public abstract class BaseDao {
     private Connection connection;
     private PreparedStatement preparedStatement;
 
+    /**
+     * Init
+     *
+     * @param url          JDBC_URL.
+     * @param userName     USERNAME.
+     * @param userPassword USER_PASSWORD.
+     */
     protected BaseDao(String url, String userName, String userPassword) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
